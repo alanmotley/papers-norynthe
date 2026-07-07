@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">The Norynthe Papers</title>
+  <desc id="description">On Trust, Inference, and Intelligence</desc>
+  <rect width="1200" height="630" fill="#0f1115"/>
+  <rect x="64" y="64" width="1072" height="502" fill="#15191f" stroke="#35404b" stroke-width="1"/>
+  <rect x="64" y="64" width="8" height="502" fill="#86a9c9"/>
+  <text x="112" y="130" fill="#86a9c9" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">NORYNTHE · VOLUME I</text>
+  <text x="112" y="244" fill="#f7f9fb" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="750" letter-spacing="-4">The Norynthe Papers</text>
+  <line x1="112" y1="294" x2="1088" y2="294" stroke="#35404b" stroke-width="1"/>
+  <text x="112" y="378" fill="#c8d0d8" font-family="Georgia, serif" font-size="42">On Trust, Inference,</text>
+  <text x="112" y="432" fill="#c8d0d8" font-family="Georgia, serif" font-size="42">and Intelligence</text>
+  <text x="112" y="514" fill="#8c97a2" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">FIRST EDITORIAL EDITION · 2026</text>
+</svg>

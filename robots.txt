@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://papers.norynthe.com/sitemap.xml
