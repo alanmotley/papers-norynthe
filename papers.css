@@ -138,20 +138,15 @@ ol {
 
 .brand {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
   white-space: nowrap;
 }
 
-.brand-institution {
-  color: var(--nt-white);
-  font-size: 1.18rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-
-.brand-institution::after {
-  content: ".";
+.brand-logo {
+  width: 126px;
+  height: auto;
+  filter: invert(1) brightness(1.22);
 }
 
 .brand-series {
