@@ -181,7 +181,7 @@ ol {
 }
 
 .hero {
-  min-height: calc(100svh - 96px);
+  min-height: 720px;
   padding-block: clamp(88px, 8vw, 112px);
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.7fr);
