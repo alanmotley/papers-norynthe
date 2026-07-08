@@ -610,18 +610,14 @@ ol {
   align-items: start;
 }
 
-.footer-institution,
 .footer-series {
   display: block;
 }
 
-.footer-institution {
-  font-size: 1.15rem;
-  font-weight: 800;
-}
-
-.footer-institution::after {
-  content: ".";
+.footer-logo {
+  width: 132px;
+  height: auto;
+  filter: invert(1) brightness(1.22);
 }
 
 .footer-series {
