@@ -258,7 +258,7 @@ ol {
   justify-content: center;
   padding: 12px 18px;
   border: 1px solid transparent;
-  border-radius: var(--nt-radius);
+  border-radius: 0;
   font-size: 0.73rem;
   font-weight: 780;
   letter-spacing: 0.08em;
