@@ -213,9 +213,9 @@ def build_page(content: str, toc_items: str) -> str:
     "@graph": [
       {{
         "@type": "Organization",
-        "@id": "https://www.norynthe.com/#organization",
+        "@id": "https://norynthe.com/#organization",
         "name": "Norynthe",
-        "url": "https://www.norynthe.com/"
+        "url": "https://norynthe.com/"
       }},
       {{
         "@type": "Book",
@@ -231,7 +231,7 @@ def build_page(content: str, toc_items: str) -> str:
           "@id": "https://www.alanmotley.com/#person",
           "name": "Alan Motley"
         }},
-        "publisher": {{ "@id": "https://www.norynthe.com/#organization" }},
+        "publisher": {{ "@id": "https://norynthe.com/#organization" }},
         "isPartOf": {{ "@id": "https://papers.norynthe.com/#series" }},
         "inLanguage": "en",
         "encoding": {{
@@ -329,14 +329,14 @@ def build_page(content: str, toc_items: str) -> str:
       <div class="footer-links">
         <a href="/">Papers</a>
         <a href="{PDF_URL}" download>PDF</a>
-        <a href="https://www.norynthe.com/">Norynthe Home</a>
+        <a href="https://norynthe.com/">Norynthe Home</a>
       </div>
       <p class="copyright">Copyright © 2026 Norynthe.</p>
     </div>
   </footer>
 
-  <script src="https://www.norynthe.com/norynthe-analytics.js" defer></script>
-  <script src="https://www.norynthe.com/norynthe-pulse-tracker.js" defer data-pulse-site="papers"></script>
+  <script src="https://norynthe.com/norynthe-analytics.js" defer></script>
+  <script src="https://norynthe.com/norynthe-pulse-tracker.js" defer data-pulse-site="papers"></script>
 </body>
 </html>
 '''
