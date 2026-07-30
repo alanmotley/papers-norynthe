@@ -235,7 +235,7 @@ def build_page(content: str, toc_items: str) -> str:
         "datePublished": "2026",
         "author": {{
           "@type": "Person",
-          "@id": "https://www.alanmotley.com/#person",
+          "@id": "https://alanmotley.com/#person",
           "name": "Alan Motley"
         }},
         "publisher": {{ "@id": "https://norynthe.com/#organization" }},
