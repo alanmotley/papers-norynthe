@@ -20,8 +20,20 @@ No framework or build service is required for deployment.
 
 - `/` — publication archive homepage
 - `/volume-i/` — semantic online edition of Volume I
+- `/methods/ai-assurance-method-v0-1/` — Norynthe AI Assurance Method v0.1
 - `/downloads/the-norynthe-papers-volume-i.pdf` — stable PDF publication URL
+- `/downloads/norynthe-ai-assurance-method-v0-1.pdf` — stable PDF method URL
 - `/papers-social-card.png` — 1200 × 630 social preview
+
+## Updating the AI Assurance Method
+
+The HTML reader and PDF are generated from the structured source file:
+
+```sh
+python3 tools/build_ai_assurance_method.py
+```
+
+After regeneration, verify the method page, PDF, citation, metadata, and sitemap together. A revised method version should keep the prior version available or explicitly preserve its revision relationship.
 
 ## Updating Volume I
 

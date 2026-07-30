@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "series": "The Norynthe Papers",
+    "seriesCode": "Series M-001",
+    "title": "Norynthe AI Assurance Method v0.1",
+    "shortTitle": "AI Assurance Method v0.1",
+    "subtitle": "A preliminary institutional method for evidence-bound evaluation of AI systems.",
+    "version": "0.1",
+    "status": "Published method",
+    "datePublished": "2026-07-30",
+    "displayDate": "July 30, 2026",
+    "author": "Norynthe",
+    "publisher": "Norynthe",
+    "canonicalUrl": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/",
+    "pdfUrl": "https://papers.norynthe.com/downloads/norynthe-ai-assurance-method-v0-1.pdf",
+    "downloadPath": "/downloads/norynthe-ai-assurance-method-v0-1.pdf",
+    "citation": "Norynthe. (2026). Norynthe AI Assurance Method v0.1. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
+  },
+  "abstract": [
+    "Norynthe uses the term assurance to mean an independent, evidence-bound judgment about whether an AI system's observed behavior supports a defined reliance claim under specified conditions. Assurance is not a declaration that a system is safe, compliant, unbiased, sentient, generally intelligent, or suitable for every use. It is a disciplined statement about evidence, scope, method, confidence, and limits.",
+    "This v0.1 method translates the founding thesis of The Norynthe Papers into an operational research artifact. Volume I argues that trustworthy inference should become an object of science. The present method defines how Norynthe begins to examine that object in practice: by preserving evaluation conditions, governing benchmarks, scoring behavior with stated confidence, and keeping every assurance finding open to correction.",
+    "The method is preliminary by design. It sets minimum institutional rules before Norynthe's benchmark library, scoring instruments, and evidence ledgers mature. Later versions may refine definitions, alter scoring models, add validation studies, or retire procedures. No change should erase the historical record of how Norynthe's assurance practice evolved."
+  ],
+  "principles": [
+    "Assurance is bounded reliance, not absolute trust.",
+    "Independence is a condition of assurance, not a branding claim.",
+    "A score is meaningful only with its evidence, benchmark version, scope, confidence, and limitations.",
+    "Benchmarks are governed instruments, not disposable test sets.",
+    "Corrections, appeals, and methodological criticism are part of the assurance method."
+  ],
+  "sections": [
+    {
+      "id": "what-assurance-means",
+      "title": "1. What Norynthe means by assurance",
+      "blocks": [
+        {
+          "type": "definition",
+          "term": "Assurance",
+          "text": "An independent, evidence-bound judgment about whether an AI system's observed behavior supports a defined reliance claim under specified conditions."
+        },
+        {
+          "type": "p",
+          "text": "Assurance begins where ordinary evaluation becomes consequential. A model may answer a benchmark item correctly, but correctness alone does not tell an institution whether the model can be relied upon for a class of tasks, under a deployment constraint, with a known evidence burden, and with uncertainty made visible. Assurance converts evaluation evidence into a bounded statement about reliance."
+        },
+        {
+          "type": "p",
+          "text": "The object of assurance is not the public reputation of a model and not the general intelligence of a system. The object is a claim of use: that a system, in a specified form, under specified conditions, can support a specified kind of decision or workflow to a stated level of confidence."
+        },
+        {
+          "type": "p",
+          "text": "Norynthe therefore treats assurance as an epistemic practice. It asks what is known, how it is known, what remains unknown, what conditions produced the evidence, and how much weight the evidence can responsibly bear. Assurance does not remove judgment from human institutions. It gives those institutions a more disciplined record on which judgment may depend."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Assurance is contextual: it applies to defined systems, tasks, environments, and time periods.",
+            "Assurance is evidentiary: it rests on records that can be inspected, challenged, and corrected.",
+            "Assurance is probabilistic: confidence rises and falls with evidence quality, repeatability, and uncertainty.",
+            "Assurance is revisable: new evidence may narrow, suspend, or withdraw a prior finding."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "independence-and-conflicts",
+      "title": "2. Independence and conflict-of-interest rules",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Norynthe assurance requires epistemic distance from the system being evaluated. The evaluator must be able to define the question, preserve the evidence, publish limitations, and correct conclusions without control by the model owner, vendor, deployer, sponsor, or commercial partner."
+        },
+        {
+          "type": "p",
+          "text": "Independence is not satisfied by disclosure alone. A disclosed conflict may still undermine the reliability of a finding if it gives an interested party power over method selection, evidence retention, scoring, timing, or publication. Norynthe distinguishes disclosed influence from controlled influence, and treats controlled influence as incompatible with independent assurance unless the finding is explicitly labeled as non-independent."
+        },
+        {
+          "type": "h3",
+          "text": "Minimum independence rules"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Norynthe controls the assurance method, rubric, scoring logic, evidence ledger, and final interpretive language.",
+            "Compensation may not be contingent on favorable score, trust band, publication language, renewal, procurement decision, or public endorsement.",
+            "Material financial, employment, advisory, equity, data-access, infrastructure, or partnership conflicts must be recorded in the assurance record.",
+            "Evaluators with material conflicts must be recused from scoring or interpretation unless the conflict is unavoidable and explicitly disclosed with mitigation.",
+            "The evaluated party may identify factual or methodological errors, but may not suppress unfavorable findings or rewrite conclusions.",
+            "When proprietary, privacy, security, or contractual constraints limit publication, those constraints must be visible in the public record."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "These rules apply in both directions. Norynthe must remain independent from vendors and clients, but also from its own prior claims. A benchmark Norynthe created may become obsolete. A scoring category may prove invalid. A published trust signal may be misunderstood. The method must allow the institution to revise itself without treating revision as reputational failure."
+        }
+      ]
+    },
+    {
+      "id": "evaluation-scope-and-units",
+      "title": "3. Evaluation scope and units",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Every assurance record must define what was evaluated before it reports what was found. Without scope, a result migrates beyond its evidence. A score for one model version becomes a claim about a product family. A test of short answers becomes a claim about long-horizon agency. A finding from controlled prompts becomes a guarantee about production behavior. Norynthe treats these migrations as category errors."
+        },
+        {
+          "type": "h3",
+          "text": "Primary units of evaluation"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "System unit: the model, tool, agent, product, workflow, or deployment being evaluated.",
+            "Version unit: the exact model version, release channel, configuration, prompts, tools, retrieval sources, policies, and access method used.",
+            "Task unit: the defined task family, benchmark item, scenario, or decision context under examination.",
+            "Inference unit: a single response, run, tool-using episode, judgment chain, or agent trajectory.",
+            "Evidence unit: the preserved record supporting a score, flag, confidence level, or limitation.",
+            "Reliance claim: the bounded claim about what a user or institution may reasonably rely upon after evaluation."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The reliance claim is the anchor of assurance. Norynthe does not ask whether an AI system is trustworthy in the abstract. It asks whether a specified system can be trusted for a specified purpose, to a specified degree, under specified conditions, with specified residual risk."
+        },
+        {
+          "type": "p",
+          "text": "A complete scope statement should include evaluated system identity, evaluation date, access method, benchmark set and version, task population, excluded uses, evidence sources, scoring method, reviewer roles, confidence basis, known limitations, and the duration or review trigger for the finding."
+        }
+      ]
+    },
+    {
+      "id": "benchmark-governance-and-versioning",
+      "title": "4. Benchmark governance and versioning",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Norynthe treats benchmarks as scientific instruments. They require provenance, versioning, calibration, exposure control, retirement rules, and revision history. A benchmark that cannot explain its own history cannot support durable assurance."
+        },
+        {
+          "type": "p",
+          "text": "Benchmark governance is necessary because AI systems adapt, data leaks, tasks become known, human expectations change, and measurement categories improve. A static benchmark may provide continuity, but continuity without revision becomes a liability. A living benchmark may remain discriminating, but revision without memory destroys comparability. Norynthe's task is to preserve both improvement and lineage."
+        },
+        {
+          "type": "h3",
+          "text": "Versioning requirements"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Every benchmark set receives a stable identifier and semantic version.",
+            "Every scoring rubric receives a stable identifier and semantic version.",
+            "Benchmark items carry provenance, intended construct, exposure status, difficulty notes, and retirement status where available.",
+            "Changes to items, rubrics, weights, thresholds, or sampling rules require a changelog entry.",
+            "Results must report both benchmark version and scoring version.",
+            "Retired or superseded versions remain preserved for historical interpretation unless legal or security obligations require restricted access."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Norynthe may use public reference items, protected items, rotating items, adversarial probes, domain-specific tasks, longitudinal tasks, and replayed historical tasks. The assurance record should state which layers were used and why. Secrecy may protect discrimination, but secrecy alone cannot be the basis of authority. Public method, representative examples, and external criticism remain necessary."
+        }
+      ]
+    },
+    {
+      "id": "scoring-and-confidence",
+      "title": "5. Scoring and confidence",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A Norynthe score is a trust signal, not the trust itself. It is a compressed representation of evidence that remains meaningful only when the underlying scope, method, benchmark version, uncertainty, and limitations remain attached."
+        },
+        {
+          "type": "p",
+          "text": "Norynthe may report scores, bands, dimensions, confidence levels, flags, narrative findings, or combinations of these. The choice depends on the maturity of the benchmark, the evidence base, and the consequence of misinterpretation. Where precision would be false, the method should prefer bands, intervals, or qualitative findings."
+        },
+        {
+          "type": "h3",
+          "text": "Minimum scoring dimensions"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Outcome accuracy: whether the answer, action, or result satisfies the task criteria.",
+            "Evidence handling: whether claims are supported, sources are represented accurately, and unsupported assertions are bounded.",
+            "Reasoning integrity: whether the response honors relevant logical, causal, mathematical, legal, procedural, or domain relations.",
+            "Calibration and uncertainty: whether confidence, refusal, abstention, and qualification match the evidence burden.",
+            "Stability: whether performance persists across repetition, paraphrase, context variation, and neighboring tasks.",
+            "Risk and consequence: whether observed failures would matter under the intended reliance claim."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Confidence levels"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "High confidence: multiple independent lines of evidence support the finding, limitations are bounded, and replication is strong enough for the stated reliance claim.",
+            "Moderate confidence: evidence supports the finding, but uncertainty, sample size, instability, or scope limits require caution.",
+            "Low confidence: evidence is suggestive but insufficient for substantial reliance.",
+            "Insufficient evidence: the method cannot support the proposed assurance claim."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Confidence describes Norynthe's confidence in the assurance finding. It is not the model's self-reported confidence, not a legal opinion, and not a probability that no harm will occur."
+        }
+      ]
+    },
+    {
+      "id": "evidence-requirements",
+      "title": "6. Evidence requirements",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Evidence is the difference between assurance and assertion. Every assurance finding must be supported by an evidence ledger sufficient to reconstruct the evaluation, understand the score, identify limitations, and challenge the conclusion."
+        },
+        {
+          "type": "h3",
+          "text": "Minimum evidence ledger"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "System identity, model version, deployment configuration, access method, and relevant tool or retrieval configuration.",
+            "Evaluation date, environment, prompts, instructions, parameters, task sources, and sampling method.",
+            "Benchmark set, benchmark version, scoring rubric, rubric version, weights, thresholds, and adjudication rules.",
+            "Raw outputs or run records sufficient to audit scoring, with restrictions noted where privacy or security requires redaction.",
+            "Evaluator identities or roles, review assignments, recusal records, disagreements, and adjudication notes.",
+            "Source materials used for factual verification and a record of how source support was judged.",
+            "Statistical summaries, confidence rationale, known failure modes, exclusions, and unresolved questions.",
+            "Correction history, appeal status, and links to superseding records where applicable."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The public record may be thinner than the internal evidence ledger when security, privacy, intellectual property, or benchmark integrity requires restriction. The existence and reason for restriction should be visible. Restricted evidence should still be governed, retained, and available for appropriate audit."
+        }
+      ]
+    },
+    {
+      "id": "limitations-corrections-and-appeals",
+      "title": "7. Limitations, corrections, and appeals",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Assurance is trustworthy only when its limits are part of the finding. Every Norynthe assurance record should include a limitations section that identifies where the method may fail, where evidence is incomplete, and where a result should not be generalized."
+        },
+        {
+          "type": "h3",
+          "text": "Common limitation classes"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Version limitation: the evaluated system may change after assessment.",
+            "Context limitation: the result may not apply outside tested tasks, domains, languages, or workflows.",
+            "Access limitation: API behavior, hidden system prompts, provider routing, or policy layers may not be fully observable.",
+            "Contamination limitation: prior exposure to benchmark content may inflate performance.",
+            "Sampling limitation: small or unrepresentative samples may understate rare failures.",
+            "Human-judgment limitation: scorer interpretation, domain expertise, and adjudication may affect results.",
+            "Deployment limitation: production integrations may introduce risks absent from controlled evaluation."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Corrections are not a departure from the method. They are evidence that the method remains alive. Norynthe should correct factual errors, methodological errors, scoring errors, broken links, incorrect metadata, or misleading limitations with clear dates and revision notes. Material corrections should preserve the prior record and link to the corrected version."
+        },
+        {
+          "type": "p",
+          "text": "Appeals may challenge factual accuracy, scope, evidence interpretation, scoring application, conflict handling, or publication language. Appeals should not become a mechanism for suppressing inconvenient findings. The evaluated party may submit evidence; Norynthe retains editorial control over the public assurance record."
+        }
+      ]
+    },
+    {
+      "id": "what-norynthe-does-not-certify",
+      "title": "8. What Norynthe does not certify or guarantee",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Norynthe assurance should be read with restraint. Unless a future publication explicitly creates a separate certification program with defined legal, technical, and audit requirements, Norynthe assurance findings are research and evaluation records, not certificates of general fitness."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Norynthe does not guarantee that an AI system is safe in all contexts.",
+            "Norynthe does not certify legal, regulatory, medical, financial, educational, employment, or procurement compliance.",
+            "Norynthe does not guarantee absence of hallucination, bias, security vulnerability, privacy risk, misuse, or harmful output.",
+            "Norynthe does not certify that a model is generally intelligent, conscious, aligned, truthful, or suitable for autonomous authority.",
+            "Norynthe does not endorse a vendor, product, investment, procurement decision, or deployment solely because an assurance record exists.",
+            "Norynthe does not guarantee future behavior after model updates, policy changes, prompt changes, tool changes, data changes, or deployment changes."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The practical meaning of a Norynthe assurance finding is narrower and stronger: under recorded conditions, according to a stated method, with preserved evidence, Norynthe found that a defined reliance claim was supported, unsupported, partially supported, or not yet assessable."
+        }
+      ]
+    },
+    {
+      "id": "commercial-use-and-citation",
+      "title": "9. Commercial use and citation",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Commercial pages may summarize Norynthe assurance, but they should not become the source of authority for the method. The Papers own the research artifact. Commercial pages should cite this method when describing independent AI assurance, benchmark governance, trust scoring, or evidence-bound evaluation."
+        },
+        {
+          "type": "p",
+          "text": "A commercial summary should preserve four constraints: assurance is bounded; assurance depends on independence; assurance requires evidence; and assurance does not certify or guarantee general safety, compliance, or fitness."
+        },
+        {
+          "type": "p",
+          "text": "Recommended citation: Norynthe. (2026). Norynthe AI Assurance Method v0.1. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
+        }
+      ]
+    },
+    {
+      "id": "version-history",
+      "title": "10. Version history",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Version 0.1 establishes Norynthe's initial public method for AI assurance. It defines assurance, independence rules, evaluation units, benchmark governance, scoring, confidence, evidence requirements, corrections, appeals, and non-certification limits."
+        },
+        {
+          "type": "p",
+          "text": "Future versions should record what changed, why it changed, what evidence motivated the change, and whether prior findings remain comparable. Methodological continuity matters only when revision history is visible."
+        }
+      ]
+    }
+  ]
+}

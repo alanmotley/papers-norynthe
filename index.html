@@ -32,7 +32,7 @@
   <link rel="icon" href="/norynthe-icon-48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/norynthe-icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/papers.css?v=20260707e">
+  <link rel="stylesheet" href="/papers.css?v=20260730a">
 
   <script type="application/ld+json">
   {
@@ -70,7 +70,14 @@
         "description": "Norynthe research on trustworthy inference, interpretive integrity, independent AI assurance, living benchmarks, and evaluation methodology.",
         "isPartOf": { "@id": "https://papers.norynthe.com/#website" },
         "publisher": { "@id": "https://norynthe.com/#organization" },
-        "mainEntity": { "@id": "https://papers.norynthe.com/volume-i/#book" },
+        "mainEntity": [
+          { "@id": "https://papers.norynthe.com/volume-i/#book" },
+          { "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method" }
+        ],
+        "hasPart": [
+          { "@id": "https://papers.norynthe.com/volume-i/#book" },
+          { "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method" }
+        ],
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://papers.norynthe.com/papers-social-card.png",
@@ -98,6 +105,24 @@
         "encoding": {
           "@type": "MediaObject",
           "contentUrl": "https://papers.norynthe.com/downloads/the-norynthe-papers-volume-i.pdf",
+          "encodingFormat": "application/pdf"
+        }
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method",
+        "url": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/",
+        "name": "Norynthe AI Assurance Method v0.1",
+        "alternativeHeadline": "A preliminary institutional method for evidence-bound evaluation of AI systems.",
+        "version": "0.1",
+        "datePublished": "2026-07-30",
+        "author": { "@id": "https://norynthe.com/#organization" },
+        "publisher": { "@id": "https://norynthe.com/#organization" },
+        "isPartOf": { "@id": "https://papers.norynthe.com/#series" },
+        "inLanguage": "en",
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://papers.norynthe.com/downloads/norynthe-ai-assurance-method-v0-1.pdf",
           "encodingFormat": "application/pdf"
         }
       }
@@ -136,9 +161,15 @@
         <p class="hero-subtitle">A continuing publication series documenting the development of the science of trustworthy inference.</p>
         <p class="hero-introduction">The Norynthe Papers are the primary institutional publications of Norynthe. Each volume reflects the institution’s evolving understanding of trust, inference, machine reasoning, evaluation methodology, and the preservation of knowledge across generations of intelligent systems.</p>
         <p class="hero-introduction">Together, the Papers provide the scientific and methodological foundations for Norynthe’s approach to independent AI assurance. Research into practice: see how Norynthe applies these foundations through <a href="https://norynthe.com/market-position.html"><strong>outside-in AI assurance</strong></a> and <a href="https://norynthe.com/independent-ai-model-evaluation.html"><strong>independent model evaluation</strong></a>.</p>
-        <div class="hero-actions" role="group" aria-label="Volume I actions">
+        <div class="hero-actions" role="group" aria-label="Publication actions">
           <a
             class="button button-primary"
+            href="/methods/ai-assurance-method-v0-1/"
+            data-analytics-role="paper_read"
+            data-analytics-material="Norynthe AI Assurance Method v0.1"
+          >Read Assurance Method</a>
+          <a
+            class="button button-secondary"
             href="/volume-i/"
             data-analytics-role="paper_read"
             data-analytics-material="The Norynthe Papers — Volume I"
@@ -174,6 +205,10 @@
           <div>
             <dt>Year</dt>
             <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Latest method</dt>
+            <dd>Series M-001</dd>
           </div>
           <div>
             <dt>Discipline</dt>
@@ -253,19 +288,74 @@
           </div>
         </dl>
       </article>
+
+      <article class="publication-card publication-method">
+        <div class="publication-number" aria-hidden="true">M-001</div>
+        <div class="publication-main">
+          <p class="publication-series">The Norynthe Papers</p>
+          <p class="publication-volume">Series M-001</p>
+          <h3>Norynthe AI Assurance Method v0.1</h3>
+          <p class="publication-type">A Methodology Paper</p>
+          <p class="publication-description">This method defines what Norynthe means by assurance: an independent, evidence-bound judgment about whether an AI system’s observed behavior supports a defined reliance claim under specified conditions. It establishes the first public rules for independence, conflicts, evaluation scope, benchmark governance, scoring, confidence, evidence, corrections, appeals, and non-certification limits.</p>
+          <div class="publication-actions">
+            <a
+              class="button button-dark"
+              href="/methods/ai-assurance-method-v0-1/"
+              data-analytics-role="paper_read"
+              data-analytics-material="Norynthe AI Assurance Method v0.1"
+            >Read Method</a>
+            <a
+              class="button button-outline-dark"
+              href="/downloads/norynthe-ai-assurance-method-v0-1.pdf"
+              download
+              data-analytics-role="paper_download"
+              data-analytics-material="Norynthe AI Assurance Method v0.1"
+            >Download PDF</a>
+          </div>
+        </div>
+        <dl class="publication-meta">
+          <div>
+            <dt>Version</dt>
+            <dd>0.1</dd>
+          </div>
+          <div>
+            <dt>Published</dt>
+            <dd>July 30, 2026</dd>
+          </div>
+          <div>
+            <dt>Author</dt>
+            <dd>Norynthe</dd>
+          </div>
+          <div>
+            <dt>Publisher</dt>
+            <dd>Norynthe</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <dd>HTML · PDF</dd>
+          </div>
+        </dl>
+      </article>
     </section>
 
     <section class="citation-section rule-section" id="citation" aria-labelledby="citation-title">
       <div class="site-shell citation-grid">
         <div>
           <p class="section-index">III · Citation</p>
-          <h2 id="citation-title">Cite Volume I</h2>
-          <p class="section-note">Recommended institutional citation.</p>
+          <h2 id="citation-title">Cite the Papers</h2>
+          <p class="section-note">Recommended institutional citations for published records.</p>
         </div>
-        <div class="citation-record">
-          <p id="citation-text">Motley, A. (2026). <cite>The Norynthe Papers: Volume I — On Trust, Inference, and Intelligence</cite> (First Editorial Edition). Norynthe.</p>
-          <button class="copy-button" type="button" data-copy-target="citation-text" aria-describedby="copy-status">Copy citation</button>
-          <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+        <div>
+          <div class="citation-record">
+            <p id="citation-text">Motley, A. (2026). <cite>The Norynthe Papers: Volume I — On Trust, Inference, and Intelligence</cite> (First Editorial Edition). Norynthe.</p>
+            <button class="copy-button" type="button" data-copy-target="citation-text" aria-describedby="copy-status">Copy citation</button>
+            <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+          </div>
+          <div class="citation-record">
+            <p id="method-citation-text">Norynthe. (2026). <cite>Norynthe AI Assurance Method v0.1</cite>. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/</p>
+            <button class="copy-button" type="button" data-copy-target="method-citation-text" aria-describedby="method-copy-status">Copy citation</button>
+            <span class="copy-status" id="method-copy-status" role="status" aria-live="polite"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -286,7 +376,7 @@
         <article class="future-record">
           <span class="future-code">Series M</span>
           <h3>Methodology Notes</h3>
-          <span class="status-tag">Forthcoming</span>
+          <span class="status-tag">Active</span>
         </article>
         <article class="future-record">
           <span class="future-code">Series B</span>
@@ -333,6 +423,7 @@
       <p>Trustworthy inference as an object of science.</p>
       <div class="footer-links">
         <a href="/volume-i/">Volume I</a>
+        <a href="/methods/ai-assurance-method-v0-1/">Method v0.1</a>
         <a href="#citation">Citation</a>
         <a href="https://norynthe.com/">Norynthe Home</a>
       </div>

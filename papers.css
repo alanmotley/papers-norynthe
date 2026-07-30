@@ -444,6 +444,15 @@ ol {
   overflow: hidden;
 }
 
+.publication-card + .publication-card {
+  margin-top: 28px;
+}
+
+.publication-method {
+  min-height: 500px;
+  background: #dfe7ee;
+}
+
 .publication-number {
   position: absolute;
   top: 28px;
@@ -453,6 +462,10 @@ ol {
   font-size: clamp(8rem, 22vw, 17rem);
   line-height: 0.75;
   pointer-events: none;
+}
+
+.publication-method .publication-number {
+  font-size: clamp(6rem, 15vw, 12rem);
 }
 
 .publication-main,
@@ -478,6 +491,11 @@ ol {
   letter-spacing: -0.058em;
   line-height: 0.93;
   text-wrap: balance;
+}
+
+.publication-method .publication-main h3 {
+  max-width: 16ch;
+  font-size: clamp(2.45rem, 5vw, 4.9rem);
 }
 
 .publication-type {
@@ -518,6 +536,12 @@ ol {
 .citation-record {
   min-width: 0;
   padding-top: 7px;
+}
+
+.citation-record + .citation-record {
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--nt-line);
 }
 
 .citation-record > p {
@@ -934,6 +958,44 @@ ol {
   font-style: normal;
   letter-spacing: 0.03em;
   line-height: 1.8;
+}
+
+.method-definition {
+  margin: 1.6rem 0 2rem;
+  padding: 1.2rem 1.35rem;
+  border-left: 3px solid var(--nt-blue);
+  background: var(--nt-charcoal-soft);
+}
+
+.method-definition strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--nt-blue);
+  font-family: var(--nt-font-sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.method-definition p {
+  margin-bottom: 0;
+}
+
+.method-principles ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.method-principles li {
+  padding: 0.85rem 0 0.85rem 1.55rem;
+  border-bottom: 1px solid var(--nt-line);
+}
+
+.method-principles li::before {
+  float: left;
+  margin-left: -1.55rem;
+  color: var(--nt-blue);
+  content: "—";
 }
 
 .reader-article ul,
