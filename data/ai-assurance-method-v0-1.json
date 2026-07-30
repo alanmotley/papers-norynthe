@@ -13,7 +13,8 @@
     "publisher": "Norynthe",
     "canonicalUrl": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/",
     "pdfUrl": "https://papers.norynthe.com/downloads/norynthe-ai-assurance-method-v0-1.pdf",
-    "downloadPath": "/downloads/norynthe-ai-assurance-method-v0-1.pdf",
+    "downloadPath": "https://norynthe-pulse-tracker.alanmotley.workers.dev/download/ai-assurance-method-v0-1?site=papers",
+    "canonicalDownloadPath": "/downloads/norynthe-ai-assurance-method-v0-1.pdf",
     "citation": "Norynthe. (2026). Norynthe AI Assurance Method v0.1. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
   },
   "abstract": [

@@ -18,7 +18,14 @@ SOURCE = ROOT.parent / (
     "- First Editorial Edition.docx"
 )
 OUTPUT = ROOT / "volume-i" / "index.html"
-PDF_URL = "/downloads/the-norynthe-papers-volume-i.pdf"
+PUBLICATION_TITLE = (
+    "The Norynthe Papers: Volume I — On Trust, Inference, and Intelligence"
+)
+PDF_CANONICAL_PATH = "/downloads/the-norynthe-papers-volume-i.pdf"
+PDF_DOWNLOAD_URL = (
+    "https://norynthe-pulse-tracker.alanmotley.workers.dev/"
+    "download/papers-volume-i?site=papers"
+)
 
 URL_RE = re.compile(r"https?://[^\s<]+")
 
@@ -277,7 +284,16 @@ def build_page(content: str, toc_items: str) -> str:
   <header class="reader-header">
     <div class="site-shell reader-header-inner">
       <a class="reader-back" href="/">The Norynthe Papers</a>
-      <a class="reader-download" href="{PDF_URL}" download>Download PDF</a>
+      <a
+        class="reader-download"
+        href="{PDF_DOWNLOAD_URL}"
+        download
+        aria-label="Download {PUBLICATION_TITLE} as a PDF"
+        data-analytics-role="paper_download"
+        data-analytics-material="{PUBLICATION_TITLE}"
+        data-publication-title="{PUBLICATION_TITLE}"
+        data-download-canonical="{PDF_CANONICAL_PATH}"
+      >Download PDF</a>
     </div>
   </header>
 
@@ -328,7 +344,15 @@ def build_page(content: str, toc_items: str) -> str:
       <p>Trustworthy inference as an object of science.</p>
       <div class="footer-links">
         <a href="/">Papers</a>
-        <a href="{PDF_URL}" download>PDF</a>
+        <a
+          href="{PDF_DOWNLOAD_URL}"
+          download
+          aria-label="Download {PUBLICATION_TITLE} as a PDF"
+          data-analytics-role="paper_download"
+          data-analytics-material="{PUBLICATION_TITLE}"
+          data-publication-title="{PUBLICATION_TITLE}"
+          data-download-canonical="{PDF_CANONICAL_PATH}"
+        >PDF</a>
         <a href="https://norynthe.com/">Norynthe Home</a>
       </div>
       <p class="copyright">Copyright © 2026 Norynthe.</p>

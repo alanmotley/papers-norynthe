@@ -214,8 +214,11 @@ def build_html(data: dict[str, Any]) -> str:
         class="reader-download"
         href="{escape(meta["downloadPath"])}"
         download
+        aria-label="Download {escape(meta["title"])} as a PDF"
         data-analytics-role="paper_download"
         data-analytics-material="{escape(meta["title"])}"
+        data-publication-title="{escape(meta["title"])}"
+        data-download-canonical="{escape(meta["canonicalDownloadPath"])}"
       >Download PDF</a>
     </div>
   </header>
@@ -297,8 +300,11 @@ def build_html(data: dict[str, Any]) -> str:
         <a
           href="{escape(meta["downloadPath"])}"
           download
+          aria-label="Download {escape(meta["title"])} as a PDF"
           data-analytics-role="paper_download"
           data-analytics-material="{escape(meta["title"])}"
+          data-publication-title="{escape(meta["title"])}"
+          data-download-canonical="{escape(meta["canonicalDownloadPath"])}"
         >PDF</a>
         <a href="https://norynthe.com/">Norynthe Home</a>
       </div>

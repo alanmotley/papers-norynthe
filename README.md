@@ -21,8 +21,19 @@ No framework or build service is required for deployment.
 - `/` — publication archive homepage
 - `/volume-i/` — semantic online edition of Volume I
 - `/methods/ai-assurance-method-v0-1/` — Norynthe AI Assurance Method v0.1
-- `/downloads/the-norynthe-papers-volume-i.pdf` — stable PDF publication URL
-- `/downloads/norynthe-ai-assurance-method-v0-1.pdf` — stable PDF method URL
+- `/downloads/the-norynthe-papers-volume-i.pdf` — stable canonical PDF publication URL
+- `/downloads/norynthe-ai-assurance-method-v0-1.pdf` — stable canonical PDF method URL
+
+User-facing PDF actions route through the Pulse worker so a download is
+confirmed before the canonical PDF is returned:
+
+- `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/papers-volume-i?site=papers`
+- `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/ai-assurance-method-v0-1?site=papers`
+
+Keep `citation_pdf_url`, structured-data `contentUrl`, and each
+`data-download-canonical` value pointed at the stable Papers PDF. Visible
+download `href` values use the corresponding worker route. Both publication
+generators preserve this separation during rebuilds.
 - `/papers-social-card.png` — 1200 × 630 social preview
 
 ## Updating the AI Assurance Method
