@@ -21,10 +21,13 @@ OUTPUT = ROOT / "volume-i" / "index.html"
 PUBLICATION_TITLE = (
     "The Norynthe Papers: Volume I — On Trust, Inference, and Intelligence"
 )
-PDF_CANONICAL_PATH = "/downloads/the-norynthe-papers-volume-i.pdf"
+PDF_CANONICAL_PATH = (
+    "/downloads/the-norynthe-papers-volume-i-citation-revision-1.pdf"
+)
+PDF_CANONICAL_URL = f"https://papers.norynthe.com{PDF_CANONICAL_PATH}"
 PDF_DOWNLOAD_URL = (
     "https://norynthe-pulse-tracker.alanmotley.workers.dev/"
-    "download/papers-volume-i?site=papers"
+    "download/papers-volume-i-citation-revision-1?site=papers"
 )
 
 URL_RE = re.compile(r"https?://[^\s<]+")
@@ -191,7 +194,7 @@ def build_page(content: str, toc_items: str) -> str:
   <meta name="citation_author" content="Alan Motley">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_publisher" content="Norynthe">
-  <meta name="citation_pdf_url" content="https://papers.norynthe.com/downloads/the-norynthe-papers-volume-i.pdf">
+  <meta name="citation_pdf_url" content="{PDF_CANONICAL_URL}">
   <link rel="canonical" href="https://papers.norynthe.com/volume-i/">
 
   <meta property="og:type" content="article">
@@ -202,6 +205,7 @@ def build_page(content: str, toc_items: str) -> str:
   <meta property="og:image" content="https://papers.norynthe.com/papers-social-card.png">
   <meta property="og:image:alt" content="The Norynthe Papers — On Trust, Inference, and Intelligence">
   <meta property="article:published_time" content="2026">
+  <meta property="article:modified_time" content="2026-08-02">
   <meta property="article:author" content="Alan Motley">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -212,7 +216,7 @@ def build_page(content: str, toc_items: str) -> str:
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/norynthe-icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/papers.css">
+  <link rel="stylesheet" href="/papers.css?v=20260707e">
 
   <script type="application/ld+json">
   {{
@@ -231,8 +235,9 @@ def build_page(content: str, toc_items: str) -> str:
         "name": "The Norynthe Papers, Volume I: On Trust, Inference, and Intelligence",
         "alternativeHeadline": "A Founding Treatise",
         "description": "The founding treatise of Norynthe and the science of trustworthy inference.",
-        "bookEdition": "First Editorial Edition",
+        "bookEdition": "First Editorial Edition — Citation Revision 1",
         "datePublished": "2026",
+        "dateModified": "2026-08-02",
         "author": {{
           "@type": "Person",
           "@id": "https://alanmotley.com/#person",
@@ -243,7 +248,7 @@ def build_page(content: str, toc_items: str) -> str:
         "inLanguage": "en",
         "encoding": {{
           "@type": "MediaObject",
-          "contentUrl": "https://papers.norynthe.com/downloads/the-norynthe-papers-volume-i.pdf",
+          "contentUrl": "{PDF_CANONICAL_URL}",
           "encodingFormat": "application/pdf"
         }}
       }},
@@ -279,7 +284,12 @@ def build_page(content: str, toc_items: str) -> str:
   }}
   </script>
 </head>
-<body class="reader-body" data-analytics-page="The Norynthe Papers — Volume I">
+<body
+  class="reader-body"
+  data-analytics-site="Papers"
+  data-analytics-page="The Norynthe Papers — Volume I"
+  data-analytics-content-type="paper"
+>
   <a class="skip-link" href="#volume-text">Skip to Volume I</a>
   <header class="reader-header">
     <div class="site-shell reader-header-inner">
@@ -306,7 +316,7 @@ def build_page(content: str, toc_items: str) -> str:
           <p class="reader-deck">A founding treatise on trustworthy inference as an object of science.</p>
         </div>
         <div class="reader-meta" aria-label="Publication metadata">
-          <span>First Editorial Edition</span>
+          <span>First Editorial Edition · Citation Revision 1</span>
           <span>Alan Motley</span>
           <span>Norynthe · 2026</span>
         </div>
@@ -330,7 +340,7 @@ def build_page(content: str, toc_items: str) -> str:
 
       <article class="reader-article" id="volume-text">
         {content}
-        <p class="reader-endnote">End of the First Editorial Edition · 2026</p>
+        <p class="reader-endnote">End of the First Editorial Edition · Citation Revision 1 · 2026</p>
       </article>
     </div>
   </main>
