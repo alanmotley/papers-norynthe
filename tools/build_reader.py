@@ -21,13 +21,11 @@ OUTPUT = ROOT / "volume-i" / "index.html"
 PUBLICATION_TITLE = (
     "The Norynthe Papers: Volume I — On Trust, Inference, and Intelligence"
 )
-PDF_CANONICAL_PATH = (
-    "/downloads/the-norynthe-papers-volume-i-citation-revision-1.pdf"
-)
+PDF_CANONICAL_PATH = "/downloads/the-norynthe-papers-volume-i.pdf"
 PDF_CANONICAL_URL = f"https://papers.norynthe.com{PDF_CANONICAL_PATH}"
 PDF_DOWNLOAD_URL = (
     "https://norynthe-pulse-tracker.alanmotley.workers.dev/"
-    "download/papers-volume-i-citation-revision-1?site=papers"
+    "download/papers-volume-i?site=papers"
 )
 
 URL_RE = re.compile(r"https?://[^\s<]+")
@@ -235,7 +233,7 @@ def build_page(content: str, toc_items: str) -> str:
         "name": "The Norynthe Papers, Volume I: On Trust, Inference, and Intelligence",
         "alternativeHeadline": "A Founding Treatise",
         "description": "The founding treatise of Norynthe and the science of trustworthy inference.",
-        "bookEdition": "First Editorial Edition — Citation Revision 1",
+        "bookEdition": "First Editorial Edition",
         "datePublished": "2026",
         "dateModified": "2026-08-02",
         "author": {{
@@ -316,7 +314,7 @@ def build_page(content: str, toc_items: str) -> str:
           <p class="reader-deck">A founding treatise on trustworthy inference as an object of science.</p>
         </div>
         <div class="reader-meta" aria-label="Publication metadata">
-          <span>First Editorial Edition · Citation Revision 1</span>
+          <span>First Editorial Edition</span>
           <span>Alan Motley</span>
           <span>Norynthe · 2026</span>
         </div>
@@ -340,7 +338,7 @@ def build_page(content: str, toc_items: str) -> str:
 
       <article class="reader-article" id="volume-text">
         {content}
-        <p class="reader-endnote">End of the First Editorial Edition · Citation Revision 1 · 2026</p>
+        <p class="reader-endnote">End of the First Editorial Edition · 2026</p>
       </article>
     </div>
   </main>
