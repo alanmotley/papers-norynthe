@@ -21,19 +21,25 @@ No framework or build service is required for deployment.
 - `/` — publication archive homepage
 - `/volume-i/` — semantic online edition of Volume I
 - `/methods/ai-assurance-method-v0-1/` — Norynthe AI Assurance Method v0.1
-- `/downloads/the-norynthe-papers-volume-i.pdf` — stable canonical PDF publication URL
+- `/downloads/the-norynthe-papers-volume-i-citation-revision-1.pdf` — current citation-verified Volume I PDF
+- `/downloads/the-norynthe-papers-volume-i.pdf` — compatibility URL containing the corrected Citation Revision 1 PDF
 - `/downloads/norynthe-ai-assurance-method-v0-1.pdf` — stable canonical PDF method URL
 
 User-facing PDF actions route through the Pulse worker so a download is
 confirmed before the canonical PDF is returned:
 
-- `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/papers-volume-i?site=papers`
+- `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/papers-volume-i-citation-revision-1?site=papers`
 - `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/ai-assurance-method-v0-1?site=papers`
 
-Keep `citation_pdf_url`, structured-data `contentUrl`, and each
-`data-download-canonical` value pointed at the stable Papers PDF. Visible
-download `href` values use the corresponding worker route. Both publication
-generators preserve this separation during rebuilds.
+For Volume I, keep `citation_pdf_url` and structured-data `contentUrl` pointed
+at the current citation-revision PDF. Keep `data-download-canonical` pointed at
+that same revision-specific PDF, and use the revision-specific Pulse route for
+visible download `href` values. The original `/download/papers-volume-i` route
+and stable PDF URL now deliver the corrected revision as compatibility aliases;
+the uncorrected PDF has been withdrawn from public distribution. The AI Assurance
+Method retains its stable method PDF in citation metadata, structured data, and
+`data-download-canonical`. Both publication generators preserve this separation
+during rebuilds.
 - `/papers-social-card.png` — 1200 × 630 social preview
 
 ## Updating the AI Assurance Method
@@ -55,7 +61,7 @@ python3 -m pip install -r tools/requirements.txt
 python3 tools/build_reader.py
 ```
 
-After regeneration, verify the online reader, PDF URL, citation, edition language, metadata, and table of contents together. Published editions should never be silently overwritten; a revised edition must retain its own explicit editorial identity and revision record.
+After regeneration, verify the online reader, PDF URL, citation, edition language, metadata, and table of contents together. Published editions should never be silently overwritten; a revised edition must retain its own explicit editorial identity and revision record. Volume I Citation Revision 1 was issued in August 2026 after a source-by-source audit of all 22 intellectual-lineage notes.
 
 ## Adding future publications
 
