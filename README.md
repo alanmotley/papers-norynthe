@@ -64,3 +64,20 @@ After regeneration, verify the online reader, PDF URL, citation, edition languag
 3. Add the publication to the homepage ledger.
 4. Add its canonical URL to `sitemap.xml`.
 5. Preserve the prior edition and document the revision relationship.
+
+## Volume II prepublication state
+
+The homepage announces Volume II for August 25, 2026 while Volume I remains
+Publication Record 001 and the current published volume. Until the release-day
+switch, Volume II has no public reader, PDF action, citation record, sitemap
+entry, or published-book structured data.
+
+On publication day:
+
+1. Confirm the final HTML reader and canonical PDF both return successfully.
+2. Replace scheduled language with the final edition and exact extent.
+3. Activate the reader and tracked PDF actions.
+4. Make Volume II the current volume and add its institutional citation.
+5. Add its Book metadata, canonical URL, PDF encoding, and sitemap entry.
+6. Update the navigation, footer, and social preview for Volume II.
+7. Verify every production link before requesting indexing.
