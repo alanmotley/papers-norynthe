@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">The Norynthe Papers, Volume II</title>
+  <desc id="description">On Reality, Records, and the Calibration of Intelligence</desc>
+  <defs>
+    <linearGradient id="panel-fill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#15191f"/>
+      <stop offset="1" stop-color="#1a2027"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0f1115"/>
+  <rect x="64" y="56" width="1072" height="518" rx="8" fill="url(#panel-fill)" stroke="#35404b" stroke-width="1"/>
+  <path d="M72 56H64V574H72" fill="#86a9c9"/>
+
+  <g aria-hidden="true">
+    <text x="846" y="432" fill="#86a9c9" fill-opacity="0.1" font-family="Georgia, serif" font-size="244">II</text>
+    <rect x="852" y="174" width="218" height="112" fill="#86a9c9" fill-opacity="0.035" stroke="#86a9c9" stroke-opacity="0.32"/>
+    <rect x="888" y="316" width="218" height="112" fill="#c8d0d8" fill-opacity="0.018" stroke="#c8d0d8" stroke-opacity="0.2"/>
+    <path d="M1070 230H1100V372H1077" fill="none" stroke="#86a9c9" stroke-opacity="0.42" stroke-width="2"/>
+    <path d="M1085 363L1076 372L1085 381" fill="none" stroke="#86a9c9" stroke-opacity="0.42" stroke-width="2"/>
+  </g>
+
+  <text x="112" y="112" fill="#86a9c9" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="750" letter-spacing="3.6">NORYNTHE · VOLUME II</text>
+  <text x="112" y="168" fill="#c8d0d8" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="720" letter-spacing="-1">The Norynthe Papers</text>
+  <text x="112" y="250" fill="#f7f9fb" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="760" letter-spacing="-2.5">On Reality, Records,</text>
+  <text x="112" y="316" fill="#f7f9fb" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="760" letter-spacing="-2.5">and the Calibration</text>
+  <text x="112" y="382" fill="#f7f9fb" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="760" letter-spacing="-2.5">of Intelligence</text>
+  <text x="112" y="442" fill="#86a9c9" font-family="Georgia, serif" font-size="24" font-style="italic">A Treatise on Continuous Epistemic Calibration</text>
+  <text x="112" y="526" fill="#8c97a2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750" letter-spacing="2.4">FIRST EDITORIAL EDITION · AUGUST 25, 2026</text>
+</svg>
