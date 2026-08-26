@@ -1,4 +1,18 @@
 (() => {
+  const CLARITY_PROJECT_ID = 'y8j5n0zmsd';
+
+  if (!window.clarity) {
+    window.clarity = function () {
+      (window.clarity.q = window.clarity.q || []).push(arguments);
+    };
+
+    const clarityScript = document.createElement('script');
+    clarityScript.async = true;
+    clarityScript.src = `https://www.clarity.ms/tag/${CLARITY_PROJECT_ID}`;
+    clarityScript.dataset.clarityProject = CLARITY_PROJECT_ID;
+    document.head.appendChild(clarityScript);
+  }
+
   const copyButtons = document.querySelectorAll('[data-copy-target]');
   if (!copyButtons.length) return;
 
