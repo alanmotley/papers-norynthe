@@ -20,19 +20,22 @@ No framework or build service is required for deployment.
 
 - `/` — publication archive homepage
 - `/volume-i/` — semantic online edition of Volume I
+- `/volume-ii/` — semantic online edition of Volume II
 - `/methods/ai-assurance-method-v0-1/` — Norynthe AI Assurance Method v0.1
 - `/downloads/the-norynthe-papers-volume-i.pdf` — stable canonical Volume I PDF
+- `/downloads/the-norynthe-papers-volume-ii.pdf` — stable canonical Volume II PDF
 - `/downloads/norynthe-ai-assurance-method-v0-1.pdf` — stable canonical PDF method URL
 
 User-facing PDF actions route through the Pulse worker so a download is
 confirmed before the canonical PDF is returned:
 
 - `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/papers-volume-i?site=papers`
+- `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/papers-volume-ii?site=papers`
 - `https://norynthe-pulse-tracker.alanmotley.workers.dev/download/ai-assurance-method-v0-1?site=papers`
 
-For Volume I, keep `citation_pdf_url`, structured-data `contentUrl`, and
-`data-download-canonical` pointed at the stable canonical PDF. Use the stable
-Pulse route for visible download `href` values. The AI Assurance Method retains
+For Volumes I and II, keep `citation_pdf_url`, structured-data `contentUrl`, and
+`data-download-canonical` pointed at each stable canonical PDF. Use the stable
+Pulse routes for visible download `href` values. The AI Assurance Method retains
 its stable method PDF in citation metadata, structured data, and
 `data-download-canonical`. Both publication generators preserve this separation
 during rebuilds.
@@ -67,19 +70,8 @@ After regeneration, verify the online reader, PDF URL, citation, edition languag
 4. Add its canonical URL to `sitemap.xml`.
 5. Verify the publication metadata and public download paths together.
 
-## Volume II prepublication state
+## Volume II publication state
 
-The homepage announces Volume II for August 25, 2026 while Volume I remains
-Publication Record 001 and the current published volume. Until the release-day
-switch, Volume II has no public reader, PDF action, citation record, sitemap
-entry, or published-book structured data.
-
-On publication day:
-
-1. Confirm the final HTML reader and canonical PDF both return successfully.
-2. Replace scheduled language with the final edition and exact extent.
-3. Activate the reader and tracked PDF actions.
-4. Make Volume II the current volume and add its institutional citation.
-5. Add its Book metadata, canonical URL, PDF encoding, and sitemap entry.
-6. Update the navigation, footer, and social preview for Volume II.
-7. Verify every production link before requesting indexing.
+Volume II was published on August 25, 2026. Its reader, canonical PDF,
+institutional citation, sitemap record, structured data, social preview, and
+Pulse-tracked PDF actions are active.
