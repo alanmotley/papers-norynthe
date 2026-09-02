@@ -14,7 +14,6 @@
   }
 
   const copyButtons = document.querySelectorAll('[data-copy-target]');
-  if (!copyButtons.length) return;
 
   const writeText = async (text, source) => {
     if (navigator.clipboard && window.isSecureContext) {
@@ -53,6 +52,26 @@
         copyButton.textContent = originalLabel;
         if (status) status.textContent = '';
       }, 2400);
+    });
+  });
+
+  document.querySelectorAll('[data-analytics-role="support_click"]').forEach((supportLink) => {
+    supportLink.addEventListener('click', () => {
+      const material = supportLink.dataset.analyticsMaterial || 'The Norynthe Papers';
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'support_click', {
+          event_category: 'Papers',
+          link_text: supportLink.textContent.trim(),
+          material,
+          destination: supportLink.href,
+          outbound: true
+        });
+      }
+
+      if (typeof window.clarity === 'function') {
+        window.clarity('event', 'support_click');
+      }
     });
   });
 })();
