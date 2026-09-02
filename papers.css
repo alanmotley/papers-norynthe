@@ -180,6 +180,17 @@ ol {
   border-color: var(--nt-blue);
 }
 
+.site-nav .nav-support {
+  padding-inline: 12px;
+  color: var(--nt-white);
+  border: 1px solid var(--nt-blue);
+}
+
+.site-nav .nav-support:hover {
+  color: var(--nt-black);
+  background: var(--nt-blue);
+}
+
 .hero {
   min-height: 720px;
   padding-block: clamp(88px, 8vw, 112px);
@@ -908,8 +919,15 @@ ol {
   gap: 24px;
 }
 
+.reader-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .reader-back,
-.reader-download {
+.reader-download,
+.reader-support-link {
   color: var(--nt-mist-soft);
   font-size: 0.67rem;
   font-weight: 760;
@@ -918,8 +936,20 @@ ol {
 }
 
 .reader-back:hover,
-.reader-download:hover {
+.reader-download:hover,
+.reader-support-link:hover {
   color: var(--nt-white);
+}
+
+.reader-support-link {
+  padding: 0.55rem 0.75rem;
+  color: var(--nt-white);
+  border: 1px solid var(--nt-blue);
+}
+
+.reader-support-link:hover {
+  color: var(--nt-black);
+  background: var(--nt-blue);
 }
 
 .reader-back::before {
@@ -1477,6 +1507,10 @@ ol {
 
   .reader-download {
     text-align: right;
+  }
+
+  .reader-actions {
+    gap: 12px;
   }
 
   .reader-masthead-grid,

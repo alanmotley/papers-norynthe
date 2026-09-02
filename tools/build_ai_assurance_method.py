@@ -194,7 +194,7 @@ def build_html(data: dict[str, Any]) -> str:
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/norynthe-icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/papers.css?v=20260730a">
+  <link rel="stylesheet" href="/papers.css?v=20260902d">
 
   <script type="application/ld+json">
   {json_ld}
@@ -210,6 +210,8 @@ def build_html(data: dict[str, Any]) -> str:
   <header class="reader-header">
     <div class="site-shell reader-header-inner">
       <a class="reader-back" href="/">The Norynthe Papers</a>
+      <div class="reader-actions">
+      <a class="reader-support-link" href="#support-title">Support</a>
       <a
         class="reader-download"
         href="{escape(meta["downloadPath"])}"
@@ -220,6 +222,7 @@ def build_html(data: dict[str, Any]) -> str:
         data-publication-title="{escape(meta["title"])}"
         data-download-canonical="{escape(meta["canonicalDownloadPath"])}"
       >Download PDF</a>
+      </div>
     </div>
   </header>
 

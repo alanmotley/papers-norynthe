@@ -214,7 +214,7 @@ def build_page(content: str, toc_items: str) -> str:
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/norynthe-icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/papers.css?v=20260707e">
+  <link rel="stylesheet" href="/papers.css?v=20260902d">
 
   <script type="application/ld+json">
   {{
@@ -292,6 +292,8 @@ def build_page(content: str, toc_items: str) -> str:
   <header class="reader-header">
     <div class="site-shell reader-header-inner">
       <a class="reader-back" href="/">The Norynthe Papers</a>
+      <div class="reader-actions">
+      <a class="reader-support-link" href="#support-title">Support</a>
       <a
         class="reader-download"
         href="{PDF_DOWNLOAD_URL}"
@@ -302,6 +304,7 @@ def build_page(content: str, toc_items: str) -> str:
         data-publication-title="{PUBLICATION_TITLE}"
         data-download-canonical="{PDF_CANONICAL_PATH}"
       >Download PDF</a>
+      </div>
     </div>
   </header>
 
