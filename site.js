@@ -107,7 +107,7 @@
           env: 'production',
           hosted_button_id: 'BYKMYWUY634N8',
           image: {
-            src: '/assets/norynthe-support-button.png?v=20260902b',
+            src: '/assets/norynthe-support-button.png?v=20260902c',
             title: 'Support independent research through PayPal',
             alt: 'Support independent research. The Norynthe Papers.'
           },
