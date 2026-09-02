@@ -72,6 +72,15 @@
       if (typeof window.clarity === 'function') {
         window.clarity('event', 'support_click');
       }
+
+      const pulse = window.NorynthePulse = window.NorynthePulse || { queue: [] };
+      const payload = { material, requestType: material, sourceArea: 'Papers support' };
+      if (pulse.ready && typeof pulse.track === 'function') {
+        pulse.track('support_click', payload);
+      } else {
+        pulse.queue = Array.isArray(pulse.queue) ? pulse.queue : [];
+        pulse.queue.push({ eventType: 'support_click', payload });
+      }
     });
   });
 
@@ -88,6 +97,19 @@
 
     if (typeof window.clarity === 'function') {
       window.clarity('event', eventName);
+    }
+
+    const pulsePayload = {
+      material,
+      requestType: material,
+      sourceArea: 'Papers support'
+    };
+    const pulse = window.NorynthePulse = window.NorynthePulse || { queue: [] };
+    if (pulse.ready && typeof pulse.track === 'function') {
+      pulse.track(eventName, pulsePayload);
+    } else if (eventName === 'support_click') {
+      pulse.queue = Array.isArray(pulse.queue) ? pulse.queue : [];
+      pulse.queue.push({ eventType: eventName, payload: pulsePayload });
     }
   };
 
