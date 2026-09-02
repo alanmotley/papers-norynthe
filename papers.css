@@ -845,6 +845,36 @@ ol {
   margin: 0;
 }
 
+.paypal-donate-button {
+  min-height: 56px;
+}
+
+.paypal-donate-button form,
+.paypal-donate-button > img,
+.paypal-donate-button input[type="image"] {
+  display: block;
+  width: min(100%, 360px);
+  margin-left: auto;
+}
+
+.paypal-donate-button > img,
+.paypal-donate-button input[type="image"] {
+  height: auto;
+  border: 0;
+  transition: filter 140ms ease, transform 140ms ease;
+}
+
+.paypal-donate-button > img:hover,
+.paypal-donate-button input[type="image"]:hover {
+  filter: brightness(1.05);
+}
+
+.paypal-donate-button > img:focus-visible,
+.paypal-donate-button input[type="image"]:focus-visible {
+  outline: 3px solid var(--nt-blue);
+  outline-offset: 4px;
+}
+
 .support-action p {
   margin-top: 13px;
   color: #8d98a2;
@@ -1369,6 +1399,12 @@ ol {
 
   .support-action {
     text-align: left;
+  }
+
+  .paypal-donate-button form,
+  .paypal-donate-button > img,
+  .paypal-donate-button input[type="image"] {
+    margin-left: 0;
   }
 
   .release-banner {

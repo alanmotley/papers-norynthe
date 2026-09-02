@@ -351,8 +351,8 @@ def build_page(content: str, toc_items: str) -> str:
         <p>The Norynthe Papers are published freely as part of an independent research program on AI trust, evaluation, and accountability. Voluntary contributions support continued research, publication, and the infrastructure that keeps this work publicly accessible.</p>
       </div>
       <div class="support-action">
-        <a class="button button-secondary" href="https://www.paypal.com/donate/?hosted_button_id=BYKMYWUY634N8" target="_blank" rel="noopener noreferrer" data-analytics-role="support_click" data-analytics-material="{PUBLICATION_TITLE}">Support independent research</a>
-        <p>Secure contribution through PayPal.<br>Support does not influence research findings.</p>
+        <div class="paypal-donate-button" data-analytics-material="{PUBLICATION_TITLE}"><a class="button button-secondary" href="https://www.paypal.com/donate/?hosted_button_id=BYKMYWUY634N8" target="_blank" rel="noopener noreferrer" data-analytics-role="support_click" data-analytics-material="{PUBLICATION_TITLE}">Support independent research</a></div>
+        <p class="support-status" aria-live="polite">Secure contribution through PayPal.<br>Support does not influence research findings.</p>
       </div>
     </div>
   </section>

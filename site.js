@@ -74,4 +74,62 @@
       }
     });
   });
+
+  const donateContainers = Array.from(document.querySelectorAll('.paypal-donate-button'));
+
+  const recordSupportEvent = (eventName, material) => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, {
+        event_category: 'Papers',
+        material,
+        payment_provider: 'PayPal'
+      });
+    }
+
+    if (typeof window.clarity === 'function') {
+      window.clarity('event', eventName);
+    }
+  };
+
+  const renderDonateButtons = () => {
+    if (!window.PayPal || !window.PayPal.Donation) return;
+
+    donateContainers.forEach((container, index) => {
+      const material = container.dataset.analyticsMaterial || 'The Norynthe Papers';
+      const fallbackMarkup = container.innerHTML;
+      const renderTarget = `paypal-donate-button-${index + 1}`;
+
+      container.id = renderTarget;
+      container.innerHTML = '';
+
+      try {
+        window.PayPal.Donation.Button({
+          env: 'production',
+          hosted_button_id: 'BYKMYWUY634N8',
+          image: {
+            src: '/assets/norynthe-support-button.png',
+            title: 'Support independent research through PayPal',
+            alt: 'Support independent research. The Norynthe Papers.'
+          },
+          onComplete: () => {
+            const status = container.parentElement.querySelector('.support-status');
+            if (status) status.innerHTML = '<strong>Thank you for supporting independent research.</strong><br>You can continue reading the Papers here.';
+            recordSupportEvent('support_complete', material);
+          }
+        }).render(`#${renderTarget}`);
+
+        container.addEventListener('click', () => recordSupportEvent('support_click', material), { once: true });
+      } catch (error) {
+        container.innerHTML = fallbackMarkup;
+      }
+    });
+  };
+
+  if (donateContainers.length) {
+    const donateScript = document.createElement('script');
+    donateScript.src = 'https://www.paypalobjects.com/donate/sdk/donate-sdk.js';
+    donateScript.charset = 'UTF-8';
+    donateScript.onload = renderDonateButtons;
+    document.head.appendChild(donateScript);
+  }
 })();
