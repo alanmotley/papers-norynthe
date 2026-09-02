@@ -381,7 +381,7 @@ def build_page(content: str, toc_items: str) -> str:
     </div>
   </footer>
 
-  <script src="/site.js" defer></script>
+  <script src="/site.js?v=20260902b" defer></script>
   <script src="https://norynthe.com/norynthe-analytics.js" defer></script>
   <script src="https://norynthe.com/norynthe-pulse-tracker.js" defer data-pulse-site="papers"></script>
 </body>

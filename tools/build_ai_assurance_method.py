@@ -326,7 +326,7 @@ def build_html(data: dict[str, Any]) -> str:
     </div>
   </footer>
 
-  <script src="/site.js" defer></script>
+  <script src="/site.js?v=20260902b" defer></script>
   <script src="https://norynthe.com/norynthe-analytics.js" defer></script>
   <script src="https://norynthe.com/norynthe-pulse-tracker.js" defer data-pulse-site="papers"></script>
 </body>
