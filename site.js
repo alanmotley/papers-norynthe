@@ -1,4 +1,8 @@
 (() => {
+  document.querySelectorAll('[data-current-year]').forEach((element) => {
+    element.textContent = String(new Date().getFullYear());
+  });
+
   const CLARITY_PROJECT_ID = 'y8j5n0zmsd';
 
   if (!window.clarity) {

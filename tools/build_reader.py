@@ -380,13 +380,13 @@ def build_page(content: str, toc_items: str) -> str:
         >PDF</a>
         <a href="https://norynthe.com/">Norynthe Home</a>
       </div>
-      <p class="copyright">Copyright © 2026 Norynthe.</p>
+      <p class="copyright">Copyright © <span data-current-year>2026</span> Norynthe.</p>
     </div>
   </footer>
 
-  <script src="/site.js?v=20260902d" defer></script>
+  <script src="/site.js?v=20260902e" defer></script>
   <script src="https://norynthe.com/norynthe-analytics.js" defer></script>
-  <script src="https://norynthe.com/norynthe-pulse-tracker.js" defer data-pulse-site="papers"></script>
+  <script src="https://norynthe.com/norynthe-pulse-tracker.js?v=20260902-year" defer data-pulse-site="papers"></script>
 </body>
 </html>
 '''
