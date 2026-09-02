@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="56" viewBox="0 0 360 56" role="img" aria-labelledby="title desc">
   <title id="title">Support independent research</title>
   <desc id="desc">A Norynthe Papers support button</desc>
-  <rect width="360" height="56" fill="#f4f1e8"/>
-  <rect x="1" y="1" width="358" height="54" fill="none" stroke="#2f79ff" stroke-width="2"/>
-  <rect x="1" y="1" width="6" height="54" fill="#2f79ff"/>
-  <text x="184" y="25" fill="#11151b" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.7" text-anchor="middle">SUPPORT INDEPENDENT RESEARCH</text>
-  <text x="184" y="42" fill="#53606d" font-family="Georgia, serif" font-size="11" font-style="italic" text-anchor="middle">The Norynthe Papers</text>
+  <rect width="360" height="56" fill="#171b21"/>
+  <rect x="1" y="1" width="358" height="54" fill="none" stroke="#86a9c9" stroke-width="2"/>
+  <rect x="1" y="1" width="6" height="54" fill="#86a9c9"/>
+  <text x="184" y="25" fill="#f4f1e8" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.7" text-anchor="middle">SUPPORT INDEPENDENT RESEARCH</text>
+  <text x="184" y="42" fill="#86a9c9" font-family="Georgia, serif" font-size="11" font-style="italic" text-anchor="middle">The Norynthe Papers</text>
 </svg>
