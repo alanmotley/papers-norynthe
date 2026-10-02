@@ -583,6 +583,10 @@ ol {
   font-size: clamp(2.45rem, 5vw, 4.9rem);
 }
 
+.publication-method .publication-meta {
+  margin-right: 14px;
+}
+
 .publication-type {
   margin-top: 24px;
   color: #5c6874;
@@ -1342,6 +1346,10 @@ ol {
 
   .publication-meta {
     width: min(100%, 440px);
+  }
+
+  .publication-method .publication-meta {
+    margin-right: 0;
   }
 
   .footer-grid {
