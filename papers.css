@@ -603,6 +603,7 @@ ol {
 
 .publication-meta {
   align-self: start;
+  margin-top: 90px;
   border-top: 1px solid rgba(15, 17, 21, 0.22);
 }
 
@@ -1346,6 +1347,7 @@ ol {
 
   .publication-meta {
     width: min(100%, 440px);
+    margin-top: 0;
   }
 
   .publication-method .publication-meta {
