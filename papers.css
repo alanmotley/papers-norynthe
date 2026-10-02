@@ -308,6 +308,12 @@ ol {
   margin-top: 32px;
 }
 
+.hero-actions {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: start;
+}
+
 .hero-actions .button + .button {
   margin-left: 0;
 }
