@@ -33,7 +33,7 @@
   <link rel="icon" href="/norynthe-icon-48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/norynthe-icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/papers.css?v=20260902d">
+  <link rel="stylesheet" href="/papers.css?v=20261002-m002">
 
   <script type="application/ld+json">
   {
@@ -74,12 +74,14 @@
         "mainEntity": [
           { "@id": "https://papers.norynthe.com/volume-ii/#book" },
           { "@id": "https://papers.norynthe.com/volume-i/#book" },
-          { "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method" }
+          { "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method" },
+          { "@id": "https://papers.norynthe.com/methods/assurance-record-v0-1/#method" }
         ],
         "hasPart": [
           { "@id": "https://papers.norynthe.com/volume-ii/#book" },
           { "@id": "https://papers.norynthe.com/volume-i/#book" },
-          { "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method" }
+          { "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method" },
+          { "@id": "https://papers.norynthe.com/methods/assurance-record-v0-1/#method" }
         ],
         "primaryImageOfPage": {
           "@type": "ImageObject",
@@ -139,7 +141,7 @@
         "@type": "ScholarlyArticle",
         "@id": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/#method",
         "url": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/",
-        "name": "Norynthe AI Assurance Method v0.1",
+        "name": "Norynthe AI Assurance Method",
         "alternativeHeadline": "A preliminary institutional method for evidence-bound evaluation of AI systems.",
         "version": "0.1",
         "datePublished": "2026-07-30",
@@ -152,6 +154,27 @@
           "contentUrl": "https://papers.norynthe.com/downloads/norynthe-ai-assurance-method-v0-1.pdf",
           "encodingFormat": "application/pdf"
         }
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://papers.norynthe.com/methods/assurance-record-v0-1/#method",
+        "url": "https://papers.norynthe.com/methods/assurance-record-v0-1/",
+        "name": "The Norynthe Assurance Record",
+        "alternativeHeadline": "A preliminary framework for communicating evidence-bound AI assurance findings",
+        "description": "The Norynthe Assurance Record is a durable representation of an independent assurance finding about an AI system. It exists to preserve the relationship between a finding and the conditions under which that finding was established: the system evaluated, the reliance claim examined, the scope of evaluation, the evidence available, the confidence of the finding, its limitations, and the circumstances under which reassessment may become necessary.",
+        "version": "0.1",
+        "datePublished": "2026-10",
+        "author": {
+          "@id": "https://norynthe.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://norynthe.com/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://papers.norynthe.com/#series"
+        },
+        "inLanguage": "en",
+        "citation": "https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
       }
     ]
   }
@@ -203,6 +226,16 @@
           >Read Volume II</a>
           <a
             class="button button-secondary"
+            href="https://norynthe-pulse-tracker.alanmotley.workers.dev/download/papers-volume-ii?site=papers"
+            download
+            aria-label="Download The Norynthe Papers: Volume II as a PDF"
+            data-analytics-role="paper_download"
+            data-analytics-material="The Norynthe Papers: Volume II"
+            data-publication-title="The Norynthe Papers: Volume II"
+            data-download-canonical="/downloads/the-norynthe-papers-volume-ii.pdf"
+          >Download Volume II PDF</a>
+          <a
+            class="button button-secondary"
             href="/volume-i/"
             data-analytics-role="paper_read"
             data-analytics-material="The Norynthe Papers — Volume I"
@@ -211,8 +244,34 @@
             class="button button-secondary"
             href="/methods/ai-assurance-method-v0-1/"
             data-analytics-role="paper_read"
-            data-analytics-material="Norynthe AI Assurance Method v0.1"
+            data-analytics-material="Norynthe AI Assurance Method"
           >Read Assurance Method</a>
+          <a
+            class="button button-secondary"
+            href="https://norynthe-pulse-tracker.alanmotley.workers.dev/download/ai-assurance-method-v0-1?site=papers"
+            download
+            aria-label="Download Norynthe AI Assurance Method as a PDF"
+            data-analytics-role="paper_download"
+            data-analytics-material="Norynthe AI Assurance Method"
+            data-publication-title="Norynthe AI Assurance Method"
+            data-download-canonical="/downloads/norynthe-ai-assurance-method-v0-1.pdf"
+          >Download Assurance Method PDF</a>
+          <a
+            class="button button-secondary"
+            href="/methods/assurance-record-v0-1/"
+            data-analytics-role="paper_read"
+            data-analytics-material="The Norynthe Assurance Record"
+          >Read Assurance Record</a>
+          <a
+            class="button button-secondary"
+            href="/downloads/norynthe-assurance-record.pdf"
+            download
+            aria-label="Download The Norynthe Assurance Record as a PDF"
+            data-analytics-role="paper_download"
+            data-analytics-material="The Norynthe Assurance Record"
+            data-publication-title="The Norynthe Assurance Record"
+            data-download-canonical="/downloads/norynthe-assurance-record.pdf"
+          >Download Assurance Record PDF</a>
           <a
             class="button button-secondary"
             href="https://norynthe-pulse-tracker.alanmotley.workers.dev/download/papers-volume-i?site=papers"
@@ -224,6 +283,7 @@
             data-download-canonical="/downloads/the-norynthe-papers-volume-i.pdf"
           >Download Volume I PDF</a>
         </div>
+        <p class="hero-support-note">If you find these papers informative and useful to download, please consider making a <a href="#support">donation</a> to support the independent research, publication, and infrastructure that keep them freely available.</p>
       </div>
 
       <aside class="archive-mark" aria-label="Publication archive record">
@@ -246,11 +306,11 @@
           </div>
           <div>
             <dt>Latest publication</dt>
-            <dd><time datetime="2026-08-25">August 25, 2026</time></dd>
+            <dd><time datetime="2026-10-02">October 2, 2026</time></dd>
           </div>
           <div>
             <dt>Latest method</dt>
-            <dd>Series M-001</dd>
+            <dd>Series M-002</dd>
           </div>
           <div>
             <dt>Discipline</dt>
@@ -381,7 +441,7 @@
         <div class="publication-main">
           <p class="publication-series">The Norynthe Papers</p>
           <p class="publication-volume">Series M-001</p>
-          <h3>Norynthe AI Assurance Method v0.1</h3>
+          <h3>Norynthe AI Assurance Method</h3>
           <p class="publication-type">A Methodology Paper</p>
           <p class="publication-description">This method defines what Norynthe means by assurance: an independent, evidence-bound judgment about whether an AI system’s observed behavior supports a defined reliance claim under specified conditions. It establishes the first public rules for independence, conflicts, evaluation scope, benchmark governance, scoring, confidence, evidence, corrections, appeals, and non-certification limits.</p>
           <div class="publication-actions">
@@ -395,10 +455,10 @@
               class="button button-outline-dark"
               href="https://norynthe-pulse-tracker.alanmotley.workers.dev/download/ai-assurance-method-v0-1?site=papers"
               download
-              aria-label="Download Norynthe AI Assurance Method v0.1 as a PDF"
+              aria-label="Download Norynthe AI Assurance Method as a PDF"
               data-analytics-role="paper_download"
-              data-analytics-material="Norynthe AI Assurance Method v0.1"
-              data-publication-title="Norynthe AI Assurance Method v0.1"
+              data-analytics-material="Norynthe AI Assurance Method"
+              data-publication-title="Norynthe AI Assurance Method"
               data-download-canonical="/downloads/norynthe-ai-assurance-method-v0-1.pdf"
             >Download PDF</a>
           </div>
@@ -430,6 +490,61 @@
           </div>
         </dl>
       </article>
+
+      <article class="publication-card publication-method">
+        <div class="publication-number" aria-hidden="true">M-002</div>
+        <div class="publication-main">
+          <p class="publication-series">The Norynthe Papers</p>
+          <p class="publication-volume">Series M-002</p>
+          <h3>The Norynthe Assurance Record</h3>
+          <p class="publication-type">An Assurance Framework</p>
+          <p class="publication-description">A preliminary framework for communicating evidence-bound AI assurance findings. It preserves the relationship between findings, evidence, scope, confidence, and limitations while protecting proprietary evaluation mechanisms: auditability without replicability.</p>
+          <div class="publication-actions">
+            <a
+              class="button button-dark"
+              href="/methods/assurance-record-v0-1/"
+              data-analytics-role="paper_read"
+              data-analytics-material="The Norynthe Assurance Record"
+            >Read Framework</a>
+            <a
+              class="button button-outline-dark"
+              href="/downloads/norynthe-assurance-record.pdf"
+              download
+              aria-label="Download The Norynthe Assurance Record as a PDF"
+              data-analytics-role="paper_download"
+              data-analytics-material="The Norynthe Assurance Record"
+              data-publication-title="The Norynthe Assurance Record"
+              data-download-canonical="/downloads/norynthe-assurance-record.pdf"
+            >Download PDF</a>
+          </div>
+        </div>
+        <dl class="publication-meta">
+          <div>
+            <dt>Edition</dt>
+            <dd>Version 0.1</dd>
+          </div>
+          <div>
+            <dt>Issued</dt>
+            <dd>October 2, 2026</dd>
+          </div>
+          <div>
+            <dt>Author</dt>
+            <dd>Norynthe</dd>
+          </div>
+          <div>
+            <dt>Publisher</dt>
+            <dd>Norynthe</dd>
+          </div>
+          <div>
+            <dt>Extent</dt>
+            <dd>10 pages</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <dd>HTML · PDF</dd>
+          </div>
+        </dl>
+      </article>
     </section>
 
     <section class="citation-section rule-section" id="citation" aria-labelledby="citation-title">
@@ -447,9 +562,14 @@
           </div>
           <div class="citation-record"><p id="volume-ii-citation-text">Motley, A. (2026). <cite>The Norynthe Papers: Volume II — On Reality, Records, and the Calibration of Intelligence</cite> (First Editorial Edition). Norynthe. https://papers.norynthe.com/volume-ii/</p><button class="copy-button" type="button" data-copy-target="volume-ii-citation-text" aria-describedby="volume-ii-copy-status">Copy citation</button><span class="copy-status" id="volume-ii-copy-status" role="status" aria-live="polite"></span></div>
           <div class="citation-record">
-            <p id="method-citation-text">Norynthe. (2026). <cite>Norynthe AI Assurance Method v0.1</cite>. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/</p>
+            <p id="method-citation-text">Norynthe. (2026). <cite>Norynthe AI Assurance Method</cite>. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/</p>
             <button class="copy-button" type="button" data-copy-target="method-citation-text" aria-describedby="method-copy-status">Copy citation</button>
             <span class="copy-status" id="method-copy-status" role="status" aria-live="polite"></span>
+          </div>
+          <div class="citation-record">
+            <p id="record-citation-text">Norynthe. (2026). The Norynthe Assurance Record. The Norynthe Papers, Series M-002.</p>
+            <button class="copy-button" type="button" data-copy-target="record-citation-text" aria-describedby="record-copy-status">Copy citation</button>
+            <span class="copy-status" id="record-copy-status" role="status" aria-live="polite"></span>
           </div>
         </div>
       </div>
@@ -528,6 +648,7 @@
         <a href="/volume-ii/">Volume II</a>
         <a href="/volume-i/">Volume I</a>
         <a href="/methods/ai-assurance-method-v0-1/">Method v0.1</a>
+        <a href="/methods/assurance-record-v0-1/">Assurance Record</a>
         <a href="#citation">Citation</a>
         <a href="https://norynthe.com/">Norynthe Home</a>
       </div>

@@ -21,7 +21,8 @@ No framework or build service is required for deployment.
 - `/` — publication archive homepage
 - `/volume-i/` — semantic online edition of Volume I
 - `/volume-ii/` — semantic online edition of Volume II
-- `/methods/ai-assurance-method-v0-1/` — Norynthe AI Assurance Method v0.1
+- `/methods/ai-assurance-method-v0-1/` — Norynthe AI Assurance Method
+- `/methods/assurance-record-v0-1/` — The Norynthe Assurance Record (M-002, HTML)
 - `/downloads/the-norynthe-papers-volume-i.pdf` — stable canonical Volume I PDF
 - `/downloads/the-norynthe-papers-volume-ii.pdf` — stable canonical Volume II PDF
 - `/downloads/norynthe-ai-assurance-method-v0-1.pdf` — stable canonical PDF method URL
@@ -50,6 +51,24 @@ python3 tools/build_ai_assurance_method.py
 ```
 
 After regeneration, verify the method page, PDF, citation, metadata, and sitemap together.
+
+## Updating the Assurance Record
+
+M-002 is an HTML-only companion built from `data/assurance-record-v0-1.json`:
+
+```sh
+python3 tools/build_assurance_record.py
+```
+
+The builder reuses the actual M-001 HTML shell, shared styles, responsive contents,
+citation controls, and footer. It fails if expected template landmarks change.
+It does not create or advertise a PDF or a download-tracking route.
+The source preserves the supplied prose; headings for sections 11 and 12 were
+restored because the supplied continuation omitted headings. October 2026 is
+kept at month precision. The homepage ledger, citation, structured data, and
+sitemap also contain M-002 and should be checked when its metadata changes.
+
+Local changes are not a deployment. Preview with `python3 -m http.server 8765 --bind 127.0.0.1`.
 
 ## Updating Volume I
 

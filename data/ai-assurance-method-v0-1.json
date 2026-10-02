@@ -2,7 +2,7 @@
   "metadata": {
     "series": "The Norynthe Papers",
     "seriesCode": "Series M-001",
-    "title": "Norynthe AI Assurance Method v0.1",
+    "title": "Norynthe AI Assurance Method",
     "shortTitle": "AI Assurance Method v0.1",
     "subtitle": "A preliminary institutional method for evidence-bound evaluation of AI systems.",
     "version": "0.1",
@@ -15,7 +15,7 @@
     "pdfUrl": "https://papers.norynthe.com/downloads/norynthe-ai-assurance-method-v0-1.pdf",
     "downloadPath": "https://norynthe-pulse-tracker.alanmotley.workers.dev/download/ai-assurance-method-v0-1?site=papers",
     "canonicalDownloadPath": "/downloads/norynthe-ai-assurance-method-v0-1.pdf",
-    "citation": "Norynthe. (2026). Norynthe AI Assurance Method v0.1. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
+    "citation": "Norynthe. (2026). Norynthe AI Assurance Method. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
   },
   "abstract": [
     "Norynthe uses the term assurance to mean an independent, evidence-bound judgment about whether an AI system's observed behavior supports a defined reliance claim under specified conditions. Assurance is not a declaration that a system is safe, compliant, unbiased, sentient, generally intelligent, or suitable for every use. It is a disciplined statement about evidence, scope, method, confidence, and limits.",
@@ -311,7 +311,7 @@
         },
         {
           "type": "p",
-          "text": "Recommended citation: Norynthe. (2026). Norynthe AI Assurance Method v0.1. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
+          "text": "Recommended citation: Norynthe. (2026). Norynthe AI Assurance Method. The Norynthe Papers, Series M-001. https://papers.norynthe.com/methods/ai-assurance-method-v0-1/"
         }
       ]
     },
