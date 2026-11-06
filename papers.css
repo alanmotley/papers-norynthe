@@ -1644,8 +1644,8 @@ ol {
   }
 }
 dialog.research-gateway {
-  width: min(680px, calc(100% - 32px));
-  max-height: min(760px, calc(100% - 32px));
+  width: min(860px, calc(100% - 32px));
+  max-height: calc(100vh - 32px);
   padding: 0;
   color: var(--nt-white);
   background: var(--nt-charcoal);
@@ -1655,15 +1655,20 @@ dialog.research-gateway {
 }
 
 dialog.research-gateway::backdrop { background: rgba(5, 7, 10, 0.78); }
-.research-gateway-card { position: relative; display: grid; gap: 18px; padding: clamp(28px, 5vw, 48px); }
+.research-gateway-card { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; padding: clamp(24px, 4vw, 36px); }
+.research-gateway-card > .section-index,
+.research-gateway-card > h2,
+.research-gateway-card > .research-gateway-intro,
+.research-gateway-card > .research-gateway-actions,
+.research-gateway-card > .research-gateway-status { grid-column: 1 / -1; }
 .research-gateway-card h2 { font-family: var(--nt-font-serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 500; }
-.research-gateway-intro, .research-gateway-funding p { color: var(--nt-mist-soft); line-height: 1.65; }
+.research-gateway-intro, .research-gateway-funding p { color: var(--nt-mist-soft); line-height: 1.5; }
 .research-gateway-close { position: absolute; top: 18px; right: 20px; padding: 4px 10px; color: var(--nt-mist-soft); background: transparent; border: 0; font-size: 1.7rem; cursor: pointer; }
 .research-gateway-funding { padding: 18px; border: 1px solid var(--nt-line-strong); background: var(--nt-charcoal-soft); }
 .research-gateway-funding strong { display: block; margin-bottom: 7px; color: var(--nt-blue); letter-spacing: .04em; }
 .research-gateway-funding p + p { margin-top: 9px; }
 .research-gateway-note { font-size: .82rem; }
-.research-gateway-interest { display: grid; gap: 9px; padding: 0; border: 0; }
+.research-gateway-interest { display: grid; gap: 7px; align-content: start; padding: 0; border: 0; }
 .research-gateway-interest legend { margin-bottom: 3px; font-weight: 750; }
 .research-gateway-interest legend span { color: var(--nt-mist-soft); font-weight: 400; }
 .research-gateway-interest label { color: var(--nt-mist-soft); font-size: .92rem; }
@@ -1677,6 +1682,12 @@ dialog.research-gateway::backdrop { background: rgba(5, 7, 10, 0.78); }
 .research-gateway-status { min-height: 1.2em; color: var(--nt-blue); font-size: .82rem; }
 
 @media (max-width: 560px) {
+  .research-gateway-card { grid-template-columns: 1fr; overflow-y: auto; }
+  .research-gateway-card > .section-index,
+  .research-gateway-card > h2,
+  .research-gateway-card > .research-gateway-intro,
+  .research-gateway-card > .research-gateway-actions,
+  .research-gateway-card > .research-gateway-status { grid-column: auto; }
   .research-gateway-actions { display: grid; }
   .research-gateway-actions .button { text-align: center; }
 }
