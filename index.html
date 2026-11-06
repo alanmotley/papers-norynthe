@@ -581,6 +581,36 @@
     </section>
   </main>
 
+  <dialog class="research-gateway" data-research-gateway aria-labelledby="research-gateway-title">
+    <form method="dialog" class="research-gateway-card" data-gateway-form>
+      <button class="research-gateway-close" value="cancel" aria-label="Close download support options">×</button>
+      <p class="section-index">Before you download</p>
+      <h2 id="research-gateway-title">Keep the research open.</h2>
+      <p class="research-gateway-intro">The Papers remain free to read and download. If this work is useful, you can help sustain independent, evidence-bound evaluation.</p>
+      <div class="research-gateway-funding">
+        <strong>Frontier-scale evaluation funding</strong>
+        <p>A $2,500 contribution can help underwrite a focused evaluation cycle: scoped questions, preserved evidence, and a public account of what the evidence supports and where it remains limited.</p>
+        <p class="research-gateway-note">This is a funding explanation, not a promise of a particular result, endorsement, or tax-deductible status.</p>
+      </div>
+      <fieldset class="research-gateway-interest">
+        <legend>What brings you to the Papers? <span>(optional)</span></legend>
+        <label><input type="radio" name="research-interest" value="academic"> Academic research</label>
+        <label><input type="radio" name="research-interest" value="enterprise"> Enterprise or governance</label>
+        <label><input type="radio" name="research-interest" value="investment"> Investment</label>
+        <label><input type="radio" name="research-interest" value="general"> General interest</label>
+        <label class="research-gateway-email"><span>Email (optional)</span><input type="email" name="research-email" autocomplete="email" placeholder="you@example.com"></label>
+        <label class="research-gateway-consent"><input type="checkbox" name="research-consent"> I consent to sharing this interest and email with Norynthe for follow-up. No email is sent unless I choose “Share interest.”</label>
+      </fieldset>
+      <div class="research-gateway-actions">
+        <button class="button button-primary" value="download" data-gateway-download>Continue to free download</button>
+        <a class="button button-secondary" href="https://www.paypal.com/donate/?hosted_button_id=BYKMYWUY634N8" target="_blank" rel="noopener noreferrer" data-analytics-role="gateway_donation_click">Support with a donation</a>
+        <a class="button button-secondary" href="https://tally.so/r/ZjezPA" target="_blank" rel="noopener noreferrer" data-analytics-role="gateway_inquiry_click" data-request-type="Enterprise inquiry" data-source-area="Research access gateway">Discuss an enterprise evaluation</a>
+        <button class="research-gateway-share" type="button" data-gateway-share>Share interest with Norynthe</button>
+      </div>
+      <p class="research-gateway-status" data-gateway-status aria-live="polite"></p>
+    </form>
+  </dialog>
+
   <footer class="site-footer">
     <div class="site-shell footer-grid">
       <div class="footer-brand">

@@ -19,6 +19,67 @@
 
   const copyButtons = document.querySelectorAll('[data-copy-target]');
 
+  let gateway = document.querySelector('[data-research-gateway]');
+  if (!gateway && document.querySelector('[data-analytics-role="paper_download"]')) {
+    gateway = document.createElement('dialog');
+    gateway.className = 'research-gateway';
+    gateway.dataset.researchGateway = '';
+    gateway.setAttribute('aria-labelledby', 'research-gateway-title');
+    gateway.innerHTML = `<form method="dialog" class="research-gateway-card" data-gateway-form><button class="research-gateway-close" value="cancel" aria-label="Close download support options">×</button><p class="section-index">Before you download</p><h2 id="research-gateway-title">Keep the research open.</h2><p class="research-gateway-intro">The Papers remain free to read and download. If this work is useful, you can help sustain independent, evidence-bound evaluation.</p><div class="research-gateway-funding"><strong>Frontier-scale evaluation funding</strong><p>A $2,500 contribution can help underwrite a focused evaluation cycle: scoped questions, preserved evidence, and a public account of what the evidence supports and where it remains limited.</p><p class="research-gateway-note">This is a funding explanation, not a promise of a particular result, endorsement, or tax-deductible status.</p></div><fieldset class="research-gateway-interest"><legend>What brings you to the Papers? <span>(optional)</span></legend><label><input type="radio" name="research-interest" value="academic"> Academic research</label><label><input type="radio" name="research-interest" value="enterprise"> Enterprise or governance</label><label><input type="radio" name="research-interest" value="investment"> Investment</label><label><input type="radio" name="research-interest" value="general"> General interest</label><label class="research-gateway-email"><span>Email (optional)</span><input type="email" name="research-email" autocomplete="email" placeholder="you@example.com"></label><label class="research-gateway-consent"><input type="checkbox" name="research-consent"> I consent to sharing this interest and email with Norynthe for follow-up. No email is sent unless I choose “Share interest.”</label></fieldset><div class="research-gateway-actions"><button class="button button-primary" value="download" data-gateway-download>Continue to free download</button><a class="button button-secondary" href="https://www.paypal.com/donate/?hosted_button_id=BYKMYWUY634N8" target="_blank" rel="noopener noreferrer" data-analytics-role="gateway_donation_click">Support with a donation</a><a class="button button-secondary" href="https://tally.so/r/ZjezPA" target="_blank" rel="noopener noreferrer" data-analytics-role="gateway_inquiry_click">Discuss an enterprise evaluation</a><button class="research-gateway-share" type="button" data-gateway-share>Share interest with Norynthe</button></div><p class="research-gateway-status" data-gateway-status aria-live="polite"></p></form>`;
+    document.body.appendChild(gateway);
+  }
+  let pendingDownload = null;
+
+  const gatewayEvent = (eventName, params = {}) => {
+    if (typeof window.gtag === 'function') window.gtag('event', eventName, { event_category: 'Papers', ...params });
+    if (typeof window.clarity === 'function') window.clarity('event', eventName);
+  };
+
+  const openGateway = (link) => {
+    if (!gateway || typeof gateway.showModal !== 'function') return false;
+    pendingDownload = link;
+    gateway.showModal();
+    gatewayEvent('research_gateway_impression', { material: link.dataset.analyticsMaterial || link.textContent.trim() });
+    return true;
+  };
+
+  document.querySelectorAll('[data-analytics-role="paper_download"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (link.dataset.gatewayComplete === 'true') return;
+      if (openGateway(link)) event.preventDefault();
+    });
+  });
+
+  if (gateway) {
+    const form = gateway.querySelector('[data-gateway-form]');
+    const status = gateway.querySelector('[data-gateway-status]');
+    const interest = () => form.querySelector('input[name="research-interest"]:checked')?.value || 'unspecified';
+    const material = () => pendingDownload?.dataset.analyticsMaterial || pendingDownload?.textContent.trim() || 'Papers download';
+
+    gateway.querySelector('[data-gateway-download]').addEventListener('click', () => {
+      gatewayEvent('research_gateway_continue_free', { material: material(), research_interest: interest() });
+      if (pendingDownload) {
+        pendingDownload.dataset.gatewayComplete = 'true';
+        gateway.close();
+        pendingDownload.click();
+        pendingDownload = null;
+      }
+    });
+
+    gateway.querySelector('[data-gateway-share]').addEventListener('click', () => {
+      const consent = form.querySelector('input[name="research-consent"]').checked;
+      const email = form.querySelector('input[name="research-email"]').value.trim();
+      if (!consent) { status.textContent = 'Please check consent before sharing your interest.'; return; }
+      if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { status.textContent = 'Please enter a valid email address or leave it blank.'; return; }
+      gatewayEvent('research_interest_share', { material: material(), research_interest: interest(), email_provided: Boolean(email) });
+      const subject = encodeURIComponent('Research interest from The Norynthe Papers');
+      const body = encodeURIComponent(`Interest: ${interest()}\nEmail: ${email || '(not provided)'}\n\nI would like to discuss the research I found through The Norynthe Papers.`);
+      window.location.href = `mailto:hello@norynthe.com?subject=${subject}&body=${body}`;
+    });
+
+    gateway.querySelectorAll('[data-analytics-role^="gateway_"]').forEach((link) => link.addEventListener('click', () => gatewayEvent(link.dataset.analyticsRole, { material: material() })));
+  }
+
   const writeText = async (text, source) => {
     if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(text);

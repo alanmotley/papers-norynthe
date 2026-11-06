@@ -1643,3 +1643,40 @@ ol {
     text-decoration: none;
   }
 }
+dialog.research-gateway {
+  width: min(680px, calc(100% - 32px));
+  max-height: min(760px, calc(100% - 32px));
+  padding: 0;
+  color: var(--nt-white);
+  background: var(--nt-charcoal);
+  border: 1px solid var(--nt-line-strong);
+  border-radius: var(--nt-radius);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+}
+
+dialog.research-gateway::backdrop { background: rgba(5, 7, 10, 0.78); }
+.research-gateway-card { position: relative; display: grid; gap: 18px; padding: clamp(28px, 5vw, 48px); }
+.research-gateway-card h2 { font-family: var(--nt-font-serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 500; }
+.research-gateway-intro, .research-gateway-funding p { color: var(--nt-mist-soft); line-height: 1.65; }
+.research-gateway-close { position: absolute; top: 18px; right: 20px; padding: 4px 10px; color: var(--nt-mist-soft); background: transparent; border: 0; font-size: 1.7rem; cursor: pointer; }
+.research-gateway-funding { padding: 18px; border: 1px solid var(--nt-line-strong); background: var(--nt-charcoal-soft); }
+.research-gateway-funding strong { display: block; margin-bottom: 7px; color: var(--nt-blue); letter-spacing: .04em; }
+.research-gateway-funding p + p { margin-top: 9px; }
+.research-gateway-note { font-size: .82rem; }
+.research-gateway-interest { display: grid; gap: 9px; padding: 0; border: 0; }
+.research-gateway-interest legend { margin-bottom: 3px; font-weight: 750; }
+.research-gateway-interest legend span { color: var(--nt-mist-soft); font-weight: 400; }
+.research-gateway-interest label { color: var(--nt-mist-soft); font-size: .92rem; }
+.research-gateway-interest input { margin-right: 7px; accent-color: var(--nt-blue); }
+.research-gateway-email { display: grid; gap: 7px; margin-top: 4px; }
+.research-gateway-email input[type="email"] { width: 100%; padding: 10px 12px; color: var(--nt-white); background: var(--nt-black); border: 1px solid var(--nt-line-strong); border-radius: 4px; }
+.research-gateway-consent { font-size: .78rem !important; line-height: 1.5; }
+.research-gateway-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.research-gateway-actions .button { font-size: .72rem; }
+.research-gateway-share { padding: 9px 0; color: var(--nt-blue); background: transparent; border: 0; cursor: pointer; font-size: .78rem; font-weight: 700; }
+.research-gateway-status { min-height: 1.2em; color: var(--nt-blue); font-size: .82rem; }
+
+@media (max-width: 560px) {
+  .research-gateway-actions { display: grid; }
+  .research-gateway-actions .button { text-align: center; }
+}
