@@ -1654,6 +1654,7 @@ dialog.research-gateway {
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
 }
 
+
 dialog.research-gateway::backdrop { background: rgba(5, 7, 10, 0.78); }
 .research-gateway-card { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; padding: clamp(24px, 4vw, 36px); }
 .research-gateway-card > .section-index,
