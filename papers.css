@@ -766,6 +766,38 @@ ol {
   color: var(--nt-blue);
 }
 
+.publication-volume-three .publication-series {
+  color: var(--nt-blue);
+}
+
+.publication-volume-three .publication-main h3 {
+  color: var(--nt-white);
+}
+
+.publication-volume-three .publication-type {
+  color: var(--nt-mist-soft);
+}
+
+.publication-volume-three .publication-description {
+  color: var(--nt-mist-soft);
+}
+
+.publication-volume-three .publication-meta {
+  border-top-color: rgba(232, 240, 246, 0.28);
+}
+
+.publication-volume-three .publication-meta > div {
+  border-bottom-color: rgba(232, 240, 246, 0.16);
+}
+
+.publication-volume-three .publication-meta dt {
+  color: var(--nt-mist);
+}
+
+.publication-volume-three .publication-meta dd {
+  color: var(--nt-white);
+}
+
 .publication-preview-actions {
   align-items: center;
 }
