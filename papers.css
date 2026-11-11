@@ -757,45 +757,47 @@ ol {
 }
 
 .publication-volume-three {
-  background: linear-gradient(135deg, rgba(29, 39, 51, 0.72), rgba(11, 15, 20, 0.96));
-  border-color: rgba(118, 169, 219, 0.42);
+  min-height: 650px;
+  color: var(--nt-ink);
+  background: #edf3f7;
+  border-top: 4px solid var(--nt-blue);
 }
 
 .publication-volume-three .publication-number,
 .publication-volume-three .publication-volume {
-  color: var(--nt-blue);
+  color: var(--nt-blue-deep);
 }
 
 .publication-volume-three .publication-series {
-  color: var(--nt-blue);
+  color: var(--nt-blue-deep);
 }
 
 .publication-volume-three .publication-main h3 {
-  color: var(--nt-white);
+  color: var(--nt-ink);
 }
 
 .publication-volume-three .publication-type {
-  color: var(--nt-mist-soft);
+  color: #5c6874;
 }
 
 .publication-volume-three .publication-description {
-  color: var(--nt-mist-soft);
+  color: var(--nt-ink-muted);
 }
 
 .publication-volume-three .publication-meta {
-  border-top-color: rgba(232, 240, 246, 0.28);
+  border-top-color: rgba(15, 17, 21, 0.22);
 }
 
 .publication-volume-three .publication-meta > div {
-  border-bottom-color: rgba(232, 240, 246, 0.16);
+  border-bottom-color: rgba(15, 17, 21, 0.13);
 }
 
 .publication-volume-three .publication-meta dt {
-  color: var(--nt-mist);
+  color: #5c6874;
 }
 
 .publication-volume-three .publication-meta dd {
-  color: var(--nt-white);
+  color: var(--nt-ink);
 }
 
 .publication-preview-actions {
@@ -803,7 +805,7 @@ ol {
 }
 
 .publication-preview-actions .status-tag {
-  color: var(--nt-white);
+  color: var(--nt-ink);
   border-color: var(--nt-blue);
 }
 
