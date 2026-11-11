@@ -756,6 +756,31 @@ ol {
   border-radius: 999px;
 }
 
+.publication-volume-three {
+  background: linear-gradient(135deg, rgba(29, 39, 51, 0.72), rgba(11, 15, 20, 0.96));
+  border-color: rgba(118, 169, 219, 0.42);
+}
+
+.publication-volume-three .publication-number,
+.publication-volume-three .publication-volume {
+  color: var(--nt-blue);
+}
+
+.publication-preview-actions {
+  align-items: center;
+}
+
+.publication-preview-actions .status-tag {
+  color: var(--nt-white);
+  border-color: var(--nt-blue);
+}
+
+.preview-note {
+  color: var(--nt-mist);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
 .revision-statement > p {
   max-width: 720px;
   color: var(--nt-white);
